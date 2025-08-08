@@ -14,19 +14,19 @@ on:
 
       steps:
        - name: Checkout do repositório
-        uses: actions/checkout@v4
+         uses: actions/checkout@v4
 
        - name: Instalar deps
          run: npm install
 
-      - name: Incial o servidor de mocks
-        run: npm run mock-server
+       - name: Incial o servidor de mocks
+         run: npm run mock-server
 
-      - name: Iniciar o servidor da aplicacao  
-        run: npm run server
+       - name: Iniciar o servidor da aplicacao  
+         run: npm run server
 
-      - name: Executar os testes 
-        run: npx cypress run 
+       - name: Executar os testes 
+         run: npx cypress run 
 
 
         
