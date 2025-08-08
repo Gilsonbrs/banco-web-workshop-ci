@@ -14,7 +14,7 @@ on:
 
       steps:
        - name: Checkout do repositório
-        uses:actions/checkout@v4
+        uses: actions/checkout@v4
 
        - name: Instalar deps
          run: npm install
