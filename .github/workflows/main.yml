@@ -1,7 +1,7 @@
 name:  'Banco web -CI'
 
 # gatilhos / triggers 
-  on: 
+on: 
   workflow_dispatch:
 
   jobs:
@@ -16,16 +16,16 @@ name:  'Banco web -CI'
        - name: Checkout do repositório
         uses:actions/checkout@v4
 
-      - name: Instalar deps
+       - name: Instalar deps
          run: npm install
 
-      -name: Incial o servidor de mocks
+      - name: Incial o servidor de mocks
         run: npm run mock-server
 
-      -name: Iniciar o servidor da aplicacao  
+      - name: Iniciar o servidor da aplicacao  
         run: npm run server
 
-      -name: Executar os testes 
+      - name: Executar os testes 
         run: npx cypress run 
 
 
